@@ -1,0 +1,32 @@
+{
+  "name": "drag-and-drop",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "cypress:debug": "DEBUG=cypress:* cypress open"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "cypress": "^4.3.0",
+    "cypress-file-upload": "file:../cypress-file-upload",
+    "rollup": "^1.20.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0"
+  },
+  "dependencies": {
+    "bulma": "^0.8.1",
+    "sirv-cli": "^0.4.4",
+    "uppie": "^1.1.2"
+  },
+  "description": "Drag and drop playground",
+  "main": "rollup.config.js",
+  "author": "Larry Knott",
+  "license": "ISC"
+}

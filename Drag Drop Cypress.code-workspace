@@ -1,0 +1,14 @@
+{
+	"folders": [
+        {
+            "path": "drag-and-drop"
+        },
+        {
+            "path": "cypress-file-upload"
+        },
+        {
+            "path": "uppie"
+        }
+    ],
+    "settings": {}
+}

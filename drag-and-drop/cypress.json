@@ -1,0 +1,11 @@
+{
+    "$schema": "https://on.cypress.io/cypress.schema.json",
+    "baseUrl": "http://localhost:5000/",
+    "chromeWebSecurity": false,
+    "watchForFileChanges": false,
+    "defaultCommandTimeout": 10000,
+    "viewportWidth": 1500,
+    "viewportHeight": 990,
+    "env": {
+    }
+}
