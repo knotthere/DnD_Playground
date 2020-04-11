@@ -23,7 +23,7 @@
   "dependencies": {
     "bulma": "^0.8.1",
     "sirv-cli": "^0.4.4",
-    "uppie": "^1.1.2"
+    "uppie": "file:../uppie"
   },
   "description": "Drag and drop playground",
   "main": "rollup.config.js",

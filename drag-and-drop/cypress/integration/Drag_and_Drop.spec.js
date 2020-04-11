@@ -10,6 +10,8 @@ describe('Drag and Drop', function() {
     const target = 'div .drophere'
     const fileName = 'example.txt'
     const fixtures = Cypress.config('fixturesFolder');
+    const subDir = 'Subdirectory'
+    const subDirFile = 'Nested_example.png'
 
     // Single File DnD
     it('TXT onto Page', function() {
@@ -18,29 +20,19 @@ describe('Drag and Drop', function() {
         cy.contains(fileName)
     })
 
-    // Fails - needs files...ß
-    it.skip('Read Directory', function() {
-        cy.fixture('Set1')
-            .then(($Set1) => {
+    it('List Sub Directory Contents', function() {
+        cy.exec(`find ${fixtures}/${subDir}`)
+            .then((dir) => {
                 // "this" is still the test context object
-                this.Set1 = $Set1
+                const files = dir.stdout.split('\n')
+                files.forEach(console.log)
             })
     })
 
-    it('List Directory Contents', function() {
-        cy.exec(`find ${fixtures}/Set1`)
-            .then((set1) => {
-                // "this" is still the test context object
-                const files = set1.stdout.split('\n')
-                // files.forEach(console.log)
-            })
-    })
-
-    it('Directory', function() {
-        const dirName = 'Set1'
+    it('Sub Directory', function() {
         cy.get(target)
-            .attachDirectory('Set1', { subjectType: 'drag-n-drop', allowEmpty: true })
-        cy.contains('Nested_Folder1_2')
+            .attachDirectory(subDir, { subjectType: 'drag-n-drop', allowEmpty: true })
+        cy.contains(subDirFile)
 
     })
 });
