@@ -1,6 +1,5 @@
 <script>
-    import { onMount } from "svelte";
-    import { droparea } from "./files.drag.drop.LTK";
+    import { droparea } from "./drag.drop.handling";
 
     let files = ["Drop Here!"];
 
