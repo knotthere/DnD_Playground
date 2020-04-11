@@ -1,0 +1,6 @@
+[submodule "uppie"]
+	path = uppie
+	url = git@github.com:knotthere/uppie.git
+[submodule "cypress-file-upload"]
+	path = cypress-file-upload
+	url = git@github.com:knotthere/cypress-file-upload.git
